@@ -1,9 +1,4 @@
-//
-//  ContentView.swift
-//  MyFirstIOSApp
-//
-//  Created by MacBook on 04.07.2022.
-//
+// these are some controles
 
 import SwiftUI
 
