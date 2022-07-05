@@ -51,8 +51,8 @@
 		FAADC2382873519E006CCF65 /* MyFirstIOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				FAADC2392873519E006CCF65 /* MyFirstIOSAppApp.swift */,
 				FAADC23B2873519E006CCF65 /* ContentView.swift */,
+				FAADC2392873519E006CCF65 /* MyFirstIOSAppApp.swift */,
 				FAADC23D287351A0006CCF65 /* Assets.xcassets */,
 				FAADC23F287351A0006CCF65 /* Preview Content */,
 			);
