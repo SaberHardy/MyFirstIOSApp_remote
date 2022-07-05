@@ -1,26 +1,11 @@
-// these are some controles
+//
+//  CardView.swift
+//  MyFirstIOSApp
+//
+//  Created by MacBook on 05.07.2022.
+//
 
 import SwiftUI
-
-struct ContentView: View {
-    // 01:03:30
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 16) {
-                ForEach(0 ..< 10) { item in
-                    CardView()
-                }
-            }
-            .padding()
-        }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
 
 struct CardView: View {
     var body: some View {
@@ -50,5 +35,11 @@ struct CardView: View {
             startPoint: .topLeading,
             endPoint: .bottomTrailing))
         .cornerRadius(30)
+    }
+}
+
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        CardView()
     }
 }
