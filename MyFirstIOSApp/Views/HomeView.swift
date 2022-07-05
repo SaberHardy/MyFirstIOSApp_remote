@@ -8,20 +8,32 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 16) {
-                        ForEach(0 ..< 10) { item in
+                        ForEach(items) { item in
                             NavigationLink(destination: DetailView()) {
-                                CardView()
+                                CardView(item: item)
                             }
                         }
                     }
                     .padding()
                 }
                 .navigationTitle("Learn SwiftUI")
+                Text("Recent Courses")
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                
+                LazyVGrid(columns:
+                            [GridItem(.adaptive(minimum: 160), spacing: 10)]) {
+                    ForEach(items) { item in
+                            SmallCardView(item: item)
+                    }
+                }.padding()
             }
         }
     }

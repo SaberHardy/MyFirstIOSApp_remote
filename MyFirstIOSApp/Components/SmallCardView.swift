@@ -1,5 +1,5 @@
 //
-//  CardView.swift
+//  SmallCardView.swift
 //  MyFirstIOSApp
 //
 //  Created by MacBook on 05.07.2022.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct CardView: View {
+struct SmallCardView: View {
     
-    var item: Item = items[3]
+    var item: Item = items[1]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -17,7 +17,7 @@ struct CardView: View {
             Image(item.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 200)
+                .frame(height: 150)
                 .frame(maxWidth: .infinity)
                 .cornerRadius(30)
             
@@ -26,13 +26,13 @@ struct CardView: View {
                 .fontWeight(.bold)
                 .lineLimit(3)
             
-            Text(item.description)
+            Text("22.10.2022 - 25.10.2022")
                 .opacity(0.7)
             
         }
         .foregroundColor(.white)
         .padding(16)
-        .frame(width: 252, height: 329)
+        .frame(height: 250)
         .background(LinearGradient(
             gradient: Gradient(colors: [.white, .purple, .green]),
             startPoint: .topLeading,
@@ -41,8 +41,8 @@ struct CardView: View {
     }
 }
 
-struct CardView_Previews: PreviewProvider {
+struct SmallCardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        SmallCardView()
     }
 }
